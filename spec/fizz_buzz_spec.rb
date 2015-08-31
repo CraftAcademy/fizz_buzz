@@ -20,5 +20,16 @@ describe 'fiz_buzz' do
     expect(fizz_buzz(15)).to eq 'FizzBuzz'
   end
   
-  
+  describe 'drinking game' do
+    it "says 'good guess' if answer is correct" do
+      rand_n = 3
+      expect(guess('fizz')).to eq 'good guess' 
+    end
+    
+    it "says 'Drink' if answer is not correct" do
+      rand_n = 3
+      expect(!guess('fizz')).to eq 'Drink'
+    end
+    
+  end
 end
