@@ -23,17 +23,23 @@ def guess(number)
 end
 
 def play_game
-  (1..100).each {|num| puts fizz_buzz(num) }
+  puts "Enter a starting number"
+  firstnumber = gets.chomp.to_i
+  puts "Enter an ending number"
+  secondnumber = gets.chomp.to_i
+  #byebug
+  (firstnumber..secondnumber).each {|num| puts fizz_buzz(num) }
+
 end
 
 def fizz_buzz(number)
   if number % 15 == 0 
-    return 'FizzBuzz'
+    puts 'FizzBuzz'
   elsif number % 5 == 0
-    return 'Buzz'
+    puts 'Buzz'
   elsif number % 3 == 0
-    return 'Fizz'
+    puts 'Fizz'
   else
-    return number
+    puts number
   end
 end
